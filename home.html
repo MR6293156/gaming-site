@@ -12,7 +12,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="./home.css" />
+    <script src="mobile.js" async></script>
   </head>
   <body>
 
@@ -116,28 +118,48 @@
 
     </style>
 
+    <!-- Back to Top Button -->
+    <a id="button"></a>
+
     
-    <div class="container">
+    <div class="container swiper">
         <header>
             <div class="logo">
                 <img src="/Images/game-controller.svg" alt="">
                 <p>The Game Zone</p>
             </div>
     <!-- Navbar -->
-    <ul class="navbar">
-        <li><a href="#" class="active">XBOX</a></li>
-        <li><a href="#">ARCADE</a></li>
-        <li><a href="#">FIFA 21</a></li>
-        <li><a href="#">PES 4</a></li>
-        <li><a href="#">NINTENDO</a></li>
-        <li><a href="#">NBA MATCH</a></li>
-      </ul>
-
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" active class="nav-link">XBOX</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">ARCADE</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">FIFA 21</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">PES 4</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">NINTENDO</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">NBA MATCH</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
       <button type="button" id="btn"><i class="fas fa-play"></i>PLAY NOW</button>
         </header>
-
 <!-- Content desc starts here -->        
-        <div class="content-wrapper">
+        <div class="swiper-wrapper">
             <div class="content-desc">
                 <h1>WELCOME TO THE GAME ZONE!!</h1>
                 <p>Compete with <span>Rakiti</span> in this epic challenge and be the
@@ -172,6 +194,7 @@
         <a href="#"><div class="img img-8"></div></a>
         </div>
     </div>
+    
     <!-- End of Section One -->
 
         <div class="game-categories">
@@ -297,8 +320,5 @@
         <div class="footer-bottom">
             <p>Copyright &copy; All Rights Reserved | Designed <span>by James Oladapo</span>, 2025</p>
         </div>
-
-
-
-      <!-- <img src="./Images/menu-btn.png" alt="" class="menu-btn" /> -->
-    </nav>
+  </body>
+</html>

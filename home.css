@@ -12,10 +12,11 @@ body {
     background: #1a0327;
     font-family: 'Poppins', sans-serif;
     height: 350vh;
+    max-width: 1700px;
+    overflow-x: hidden;
 }
 
 .container {
-    width: 100%;
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
     background-image: url(Images/home-background.jpeg);
@@ -31,6 +32,76 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-link{
+    transition: 0.7s ease;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+@media(max-width:768px){
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }    
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #000;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
 }
 
 .logo {
@@ -94,7 +165,7 @@ ul.navbar li a:hover:not(.active) {
 /* End of Header */
 
 /* Hero Section */
-.content-wrapper {
+.swiper-wrapper {
     width: 80%;
     min-height: 80vh;
     margin: auto;
@@ -224,6 +295,7 @@ ul.navbar li a:hover:not(.active) {
 
 .game-wrapper {
     display: flex;
+    position: relative;
 }
 
 .gw {
@@ -248,7 +320,7 @@ ul.navbar li a:hover:not(.active) {
 .gw-1 {
     background: url(./Images/pes22.webp);
     background-size: cover;
-    background-position: center;    
+    background-position: center;
 }
 
 .gw-2 {
@@ -382,7 +454,7 @@ ul.navbar li a:hover:not(.active) {
 
 .section-3 h1 {
     font-size: 2rem;
-    color: #fff;
+    color: #fec53a;
     text-align: center;
     font-weight: 400;    
 }
